@@ -4,7 +4,7 @@ import Header from './Header';
 const Explore = () => {
     return (
         <div>
-            
+            <p>Explore</p>
         </div>
     );
 }
