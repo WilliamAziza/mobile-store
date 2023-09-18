@@ -99,7 +99,7 @@ const Home = () => {
                             <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone 13</Card.Title>
+                            <Card.Title>iPhone 1</Card.Title>
                             <Card.Text>
                                 GHC 10, 000
                             </Card.Text>

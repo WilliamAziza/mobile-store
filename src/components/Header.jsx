@@ -13,31 +13,33 @@ const Header = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <p className='willie'>WELCOME TO WILLIES PHONES</p>
-            <p className='sell'>We sell phones at affordable prices</p>
+            <p className='willie'>WELCOME TO WILLIES STORES</p>
+            <p className='sell'>We sell products at affordable prices</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={images.banner1}
+            src={images.top1}
             alt="Second slide"
+            height='500px'
           />
           <Carousel.Caption>
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5 className='discount'>GET A DISCOUNT <span className='willie'> OF 10% OF PURCHASE</span></h5>
+            <p className='shirts'>Get all you shirts at Willies Store</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={images.banner2}
+            src={images.jacket}
             alt="Third slide"
+            
           />
           <Carousel.Caption>
-            <h5>Third slide label</h5>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <h5 className='willie'>EXPLORE MORE OF OUR PRODUCTS</h5>
+            <p className='shirts'>
+              Your number one best online shopping site
             </p>
           </Carousel.Caption>
         </Carousel.Item>

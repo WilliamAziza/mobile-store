@@ -8,4 +8,6 @@ export const images ={
     iphone12: require('./images/iphone 12.jpg'),
     iphone15: require('./images/iphone15.avif'),
     cart: require('./images/cart.png'),
+    top1: require('./images/top1.avif'),
+    jacket: require('./images/jacket.avif')
 }
