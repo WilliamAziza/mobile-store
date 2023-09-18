@@ -57,6 +57,55 @@ const Home = () => {
                             </Card.Text>
                             <Button variant="primary">Details</Button>
                         </Card.Body>
+                        
+                    </Card>
+                </Col>
+                
+            </Container>
+            <Container>
+            <Col md="4" style={{ margin: '1rem' }}>
+                    <Card>
+                        <div style={{ height: '200px', overflow: 'hidden' }}>
+                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                        </div>
+                        <Card.Body>
+                            <Card.Title>iPhone 13</Card.Title>
+                            <Card.Text>
+                                GHC 10, 000
+                            </Card.Text>
+                            <Button variant="primary">Details</Button>
+                        </Card.Body>
+                        
+                    </Card>
+                </Col>
+                <Col md="4" style={{ margin: '1rem' }}>
+                    <Card>
+                        <div style={{ height: '200px', overflow: 'hidden' }}>
+                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                        </div>
+                        <Card.Body>
+                            <Card.Title>iPhone 13</Card.Title>
+                            <Card.Text>
+                                GHC 10, 000
+                            </Card.Text>
+                            <Button variant="primary">Details</Button>
+                        </Card.Body>
+                        
+                    </Card>
+                </Col>
+                <Col md="4" style={{ margin: '1rem' }}>
+                    <Card>
+                        <div style={{ height: '200px', overflow: 'hidden' }}>
+                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                        </div>
+                        <Card.Body>
+                            <Card.Title>iPhone 13</Card.Title>
+                            <Card.Text>
+                                GHC 10, 000
+                            </Card.Text>
+                            <Button variant="primary">Details</Button>
+                        </Card.Body>
+                        
                     </Card>
                 </Col>
             </Container>

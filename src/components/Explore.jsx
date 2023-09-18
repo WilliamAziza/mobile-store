@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from './Header';
+import ProductList from './ProductList';
+
 
 const Explore = () => {
     return (
         <div>
             <p>Explore</p>
+            <ProductList/>
         </div>
     );
 }
