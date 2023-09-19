@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import Paystack from './Paystack'; // Import the Paystack component
+import Modal from 'react-bootstrap/Modal'; // Import Bootstrap modal component
 
 const CartPage = () => {
-  const { cart, removeFromCart } = useCart();
-  const [showPaymentForm, setShowPaymentForm] = useState(false); // State to control the display of the payment form
+  const { cart, removeFromCart, clearCart } = useCart(); // Add clearCart function
+  const [showPaymentModal, setShowPaymentModal] = useState(false); // State to control the display of the payment modal
 
   const handleRemoveFromCart = (productId) => {
     removeFromCart(productId);
@@ -14,14 +15,15 @@ const CartPage = () => {
     return cart.reduce((total, product) => total + product.price, 0);
   };
 
-  const handleBuy = () => {
-    // Toggle the display of the payment form when "Buy" button is clicked
-    setShowPaymentForm(true);
+  const handlePurchaseAll = () => {
+    // Toggle the display of the payment modal when "Purchase All" button is clicked
+    setShowPaymentModal(true);
   };
 
-  const handlePurchaseAll = () => {
-    // Toggle the display of the payment form when "Purchase All" button is clicked
-    setShowPaymentForm(true);
+  // Function to handle clearing the cart
+  const handlePaymentSuccess = () => {
+    clearCart();
+    setShowPaymentModal(false); // Close the payment modal
   };
 
   return (
@@ -52,12 +54,6 @@ const CartPage = () => {
                     >
                       Remove
                     </button>
-                    <button
-                      className="btn btn-primary ms-2"
-                      onClick={handleBuy}
-                    >
-                      Buy
-                    </button>
                   </div>
                 </div>
               </div>
@@ -65,15 +61,22 @@ const CartPage = () => {
           ))}
           <div className="text-end">
             <p>Total Price: GHC {calculateTotalPrice()}</p>
-            <button className="btn btn-primary ms-2" onClick={handleBuy}>
+            <button className="btn btn-primary ms-2" onClick={handlePurchaseAll}>
               Purchase All
             </button>
           </div>
         </div>
       )}
 
-      {/* Conditionally render the payment form */}
-      {showPaymentForm && <Paystack />}
+      {/* Payment Modal */}
+      <Modal show={showPaymentModal} onHide={() => setShowPaymentModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Payment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Paystack totalAmount={calculateTotalPrice()} onSuccess={handlePaymentSuccess} onClose={() => setShowPaymentModal(false)} />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

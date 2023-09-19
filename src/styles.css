@@ -127,3 +127,38 @@ body {
   
 }
 
+/* Paystack.css */
+
+/* Style the checkout form container */
+.checkout-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Style the form fields */
+.checkout-field {
+  margin-bottom: 15px;
+}
+
+/* Style the input fields with border radius */
+.checkout-field input {
+  border-radius: 5px;
+  padding: 5px; /* Add some padding for spacing */
+  border: 1px solid #ccc; /* Add a border for clarity */
+}
+
+/* Style the Paystack button */
+.paystack-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style the Paystack button on hover */
+.paystack-button:hover {
+  background-color: #0056b3;
+}
+

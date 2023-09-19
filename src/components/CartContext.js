@@ -21,8 +21,13 @@ export const CartProvider = ({ children }) => {
     setCartCount(cartCount - 1);
   };
 
+  const clearCart = () => {
+    setCart([]); // Clear the cart array
+    setCartCount(0); // Reset the cart count to 0
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount, clearCart }}>
       {children}
     </CartContext.Provider>
   );
