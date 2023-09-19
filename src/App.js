@@ -8,6 +8,7 @@ import Explore from './components/Explore';
 import ProductList from './components/ProductList';
 import CartPage from './components/CartPage'; // Import the CartPage component
 import { CartProvider } from './components/CartContext';
+import Paystack from './components/Paystack';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/product-list" element={<ProductList />} />
-            <Route path="/cart" element={<CartPage />} /> {/* Add this route */}
+            <Route path="/cart" element={<CartPage />} /> 
           </Routes>
+          
         </div>
       </Router>
     </CartProvider>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import Paystack from './Paystack'; // Import the Paystack component
-import axios from 'axios';
 
 const CartPage = () => {
   const { cart, removeFromCart } = useCart();
+  const [showPaymentForm, setShowPaymentForm] = useState(false); // State to control the display of the payment form
 
   const handleRemoveFromCart = (productId) => {
     removeFromCart(productId);
@@ -14,30 +14,18 @@ const CartPage = () => {
     return cart.reduce((total, product) => total + product.price, 0);
   };
 
-  const handleBuy = async () => {
-    // Add your buy logic here
-    const totalPrice = calculateTotalPrice();
+  const handleBuy = () => {
+    // Toggle the display of the payment form when "Buy" button is clicked
+    setShowPaymentForm(true);
+  };
 
-    try {
-      // Replace with your server endpoint for creating an order
-      const response = await axios.post('/api/createOrder', {
-        cart,
-        totalPrice,
-      });
-
-      // The response should contain information needed for payment, like an order ID
-      const { orderId } = response.data;
-
-      // Redirect to Paystack for payment
-      window.location.href = `/paystack?orderId=${orderId}&totalPrice=${totalPrice}`;
-    } catch (error) {
-      console.error('Error creating order:', error);
-    }
+  const handlePurchaseAll = () => {
+    // Toggle the display of the payment form when "Purchase All" button is clicked
+    setShowPaymentForm(true);
   };
 
   return (
     <div className="container mt-4">
-      <h2>Your Cart</h2>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -46,11 +34,17 @@ const CartPage = () => {
             <div key={product.id} className="card mb-3">
               <div className="row g-0">
                 <div className="col-md-4">
-                  <img src={product.image} alt={product.title} className="img-fluid" />
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="img-fluid"
+                    style={{ maxWidth: '100px', maxHeight: '100px' }}
+                  />
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">{product.title}</h5>
+                    <p>{product.description}</p>
                     <p className="card-text">Price: GHC {product.price}</p>
                     <button
                       className="btn btn-danger"
@@ -71,20 +65,15 @@ const CartPage = () => {
           ))}
           <div className="text-end">
             <p>Total Price: GHC {calculateTotalPrice()}</p>
-            <Paystack
-              amount={calculateTotalPrice()} // Pass the total amount to Paystack component
-              email="williamaziza37@gmail.com" // Pass the customer's email
-              onSuccess={() => {
-                alert('Payment successful!');
-                // Add logic here to mark the items as purchased in your app
-              }}
-              onClose={() => {
-                alert('Payment was canceled.');
-              }}
-            />
+            <button className="btn btn-primary ms-2" onClick={handleBuy}>
+              Purchase All
+            </button>
           </div>
         </div>
       )}
+
+      {/* Conditionally render the payment form */}
+      {showPaymentForm && <Paystack />}
     </div>
   );
 };
