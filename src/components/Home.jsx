@@ -96,12 +96,12 @@ const Home = () => {
                 <Col md="4" style={{ margin: '1rem' }}>
                     <Card>
                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                            <Card.Img variant="top" src={images.banner1} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone 1</Card.Title>
+                            <Card.Title>iPhone X</Card.Title>
                             <Card.Text>
-                                GHC 10, 000
+                                GHC 2, 000
                             </Card.Text>
                             <Button variant="primary">Details</Button>
                         </Card.Body>
