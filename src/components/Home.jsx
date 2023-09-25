@@ -24,88 +24,85 @@ const Home = () => {
                         </div>
                         <Card.Body>
                             <Card.Title>iPhone 11</Card.Title>
-                            <Card.Text>
-                              GHC 5,000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
+                            <Card.Text>GHC 2,000</Card.Text>
+                            <Link to="/product-details/iphone11">
+                                <Button variant="primary">Details</Button>
+                            </Link>
+                        </Card.Body>
+                    </Card>
+
+                </Col>
+                <Col md="4" style={{ margin: '1rem' }}>
+                <Card>
+                        <div style={{ height: '200px', overflow: 'hidden' }}>
+                            <Card.Img variant="top" src={images.jacket} style={{ height: '100%' }} />
+                        </div>
+                        <Card.Body>
+                            <Card.Title>Polo Jacket</Card.Title>
+                            <Card.Text>GHC 60</Card.Text>
+                            <Link to="/product-details/jacket">
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col md="4" style={{ margin: '1rem' }}>
-                    <Card>
+                <Card>
                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.iphone12} style={{ height: '100%' }} />
+                            <Card.Img variant="top" src={images.heels} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone 12</Card.Title>
-                            <Card.Text>
-                                GHC 7,000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
+                            <Card.Title>All Saint Heels</Card.Title>
+                            <Card.Text>GHC 200</Card.Text>
+                            <Link to="/product-details/heels">
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md="4" style={{ margin: '1rem' }}>
-                    <Card>
-                        <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
-                        </div>
-                        <Card.Body>
-                            <Card.Title>iPhone 13</Card.Title>
-                            <Card.Text>
-                                GHC 10, 000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
-                        </Card.Body>
-                        
-                    </Card>
-                </Col>
-                
+
             </Container>
             <Container>
             <Col md="4" style={{ margin: '1rem' }}>
-                    <Card>
+                <Card>
                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                            <Card.Img variant="top" src={images.blackT} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone 13</Card.Title>
-                            <Card.Text>
-                                GHC 10, 000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
+                            <Card.Title>Plain Black T- Shirt</Card.Title>
+                            <Card.Text>GHC 40</Card.Text>
+                            <Link to="/product-details/blackT">
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
-                        
                     </Card>
                 </Col>
                 <Col md="4" style={{ margin: '1rem' }}>
-                    <Card>
+                <Card>
                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.iphone15} style={{ height: '100%' }} />
+                            <Card.Img variant="top" src={images.hoodie} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone 13</Card.Title>
-                            <Card.Text>
-                                GHC 10, 000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
+                            <Card.Title>Red Hoodie</Card.Title>
+                            <Card.Text>GHC 120</Card.Text>
+                            <Link to="/product-details/hoodie">
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
-                        
                     </Card>
                 </Col>
                 <Col md="4" style={{ margin: '1rem' }}>
-                    <Card>
+                <Card>
                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={images.banner1} style={{ height: '100%' }} />
+                            <Card.Img variant="top" src={images.airmax} style={{ height: '100%' }} />
                         </div>
                         <Card.Body>
-                            <Card.Title>iPhone X</Card.Title>
-                            <Card.Text>
-                                GHC 2, 000
-                            </Card.Text>
-                            <Button variant="primary">Details</Button>
+                            <Card.Title>Nike Airmax</Card.Title>
+                            <Card.Text>GHC 220</Card.Text>
+                            <Link to="/product-details/airmax">
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
-                        
                     </Card>
                 </Col>
             </Container>

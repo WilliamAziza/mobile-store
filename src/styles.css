@@ -5,9 +5,9 @@ ul {
   list-style: none;
 }
 
-/* Add padding to the top of the content to prevent overlap with the fixed navbar */
+
 body {
-  padding-top: 70px; /* Adjust this value to match the height of your navbar */
+  padding-top: 70px; 
 }
 
 .navbar {
@@ -101,8 +101,8 @@ body {
 }
 
 .my-container {
-    padding-left: 15px; /* Adjust the left padding */
-    padding-right: 15px; /* Adjust the right padding */
+    padding-left: 15px; 
+    padding-right: 15px; 
 }
 .arrival{
     text-align: center;
@@ -111,10 +111,10 @@ body {
     color: gray;
     margin-top: 30px;
 }
-/* CSS class for fixed image size */
+
 .fixed-image {
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
+    width: 200px; 
+    height: 200px; 
 }
 
 .cart-count {
@@ -126,16 +126,18 @@ body {
   position: absolute;
   
 }
-
-/* Paystack.css */
-
-/* Style the checkout form container */
+.explore{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
 .checkout-form {
   max-width: 300px;
   margin: 0 auto;
 }
 
-/* Style the form fields */
 .checkout-field {
   margin-bottom: 15px;
 }
@@ -168,4 +170,36 @@ body {
 .text-header{
   font-weight: bold;
   color: white;
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  
+}
+.ending{
+  margin-top: 20px;
+  padding-top: 50px;
+  background-color: black;
+  color:  #959599;
+}
+
+.text-header{
+  font-weight: bold;
+  color: white;
+}
+.copy{
+  background-color: white;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+}
+.cartt{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

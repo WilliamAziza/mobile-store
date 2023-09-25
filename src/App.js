@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Explore from './components/Explore';
 import ProductList from './components/ProductList';
-import CartPage from './components/CartPage'; // Import the CartPage component
+import CartPage from './components/CartPage'; 
 import { CartProvider } from './components/CartContext';
-import Paystack from './components/Paystack';
 import Footer from './components/Footer';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -17,13 +17,16 @@ function App() {
       <Router>
         <div className="App">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/product-list" element={<ProductList />} />
-            <Route path="/cart" element={<CartPage />} /> 
-          </Routes>
-          <Footer/>
+          <div className="container-fluid">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/explore" element={<Explore />} />
+              <Route path="/product-list" element={<ProductList />} />
+              <Route path="/cart" element={<CartPage />} /> 
+              <Route path="/product-details/:productId" element={<ProductDetails />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </Router>
     </CartProvider>

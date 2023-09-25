@@ -9,5 +9,13 @@ export const images ={
     iphone15: require('./images/iphone15.avif'),
     cart: require('./images/cart.png'),
     top1: require('./images/top1.avif'),
-    jacket: require('./images/jacket.avif')
+    jacket: require('./images/jacket.avif'),
+    heels: require('./images/heels.webp'),
+    blackT: require('./images/blackT.webp'),
+    hoodie: require('./images/hoodie.webp'),
+    airmax: require('./images/airmax.avif'),
+    twitter:  require('./images/twitter.png'),
+    gmail: require('./images/gmail.png'),
+    instagram: require('./images/instagram.jpg'),
+    
 }

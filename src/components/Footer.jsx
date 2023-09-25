@@ -1,55 +1,46 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import { images } from './images';
 
 const Footer = () => {
-    return (
-        
-      <footer className='ending'>
-        <Row>
-
-          <Col md='3'>
-            <div className='footer'>
-              <center><img src={images.iph} alt='#'></img></center>
-
-              {/* socials images */}
-              <div className='footlogo'>
-                 <img src={images.Twitter} alt='djasfk' />
-                 <img src='' alt='djasfk' />
-                 <img src='' alt='djasfk' />
-              </div>
-            </div>
-          </Col>
-          <Col md='3'>
-          <div className='footer'>
-            <h3>HELP</h3>
-          <p>Privicy Policy</p>
-          <p>Refund Policy</p>
-          </div>
-          </Col>
-          <Col md='3'>
-          <div className='footer'>
-          <h3>STORE</h3>
-          <p>Men Fashion</p>
-          <p>Women Fashion</p>
-          <p>Store Sale</p>
-          <p>Collection</p>
-          </div>
-          </Col>
-          <Col md='3'>
-          <div className='footer'>
-          <h3>SUPPORT</h3>
-          <p>Feedback</p>
-          <p>Contact Us</p>
-          <p>Customer Service</p>
-          <p>Terms & Conditions</p>
-          </div>
-          </Col>
-        </Row>
-      </footer>
-      
+  return (
     
-    );
+    <div class="ending">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<h5 class="text-header">HELP</h5>
+				<p>Privacy Policy</p>
+				<p>Refund Policy</p>
+			</div>
+			<div class="col-md-2">
+				<h5 class="text-header">STORE</h5>
+				<p>Men Fashion</p>
+				<p>Women Fashion</p>
+				<p>Gadgets and Store Sale</p>
+        <p>Collection</p>
+			</div>
+			<div class="col-md-3">
+				<h5 class="text-header">SUPPORT</h5>
+				<p>Feedback</p>
+				<p>Contact Us</p>
+        <p>Customer Service</p>
+        <p>Terms & Condition</p>
+			</div>
+			<div class="col-md-5">
+				<h5 class="text-header">Follow us on All Social Media</h5>
+				<p>e-mail<span><img src={images.gmail} alt="" height='30px'/></span> : Williamaziza37@gmail.com</p>
+				<p>instagram<span><img src={images.instagram} alt="" height='30px'/></span> : @ azey_man_</p>
+        <p>twitter(X) <span><img src={images.twitter} alt="" height='30px'/></span>: @ azey_man1</p>
+
+			</div>
+		</div>
+  
+	</div>
+  <p className='copy'>&copy; 2023 All Rights Reserved</p>
+	</div>
+  
+    
+  );
 }
 
 export default Footer;

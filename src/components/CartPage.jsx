@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import Paystack from './Paystack'; // Import the Paystack component
 import Modal from 'react-bootstrap/Modal'; // Import Bootstrap modal component
+import { images } from './images';
 
 const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart(); // Add clearCart function
@@ -29,7 +30,7 @@ const CartPage = () => {
   return (
     <div className="container mt-4">
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className='cartt'>Your cart is empty.</p>
       ) : (
         <div>
           {cart.map((product) => (
@@ -42,10 +43,19 @@ const CartPage = () => {
                     className="img-fluid"
                     style={{ maxWidth: '100px', maxHeight: '100px' }}
                   />
+                  <img
+                    src={images[product.imageKey]}
+                    alt={product.title}
+                    className="img-fluid"
+                    style={{ maxWidth: '100px', maxHeight: '100px' }}
+                  />
+
+
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">{product.title}</h5>
+                    <h5 className="card-title">{product.name}</h5>
                     <p>{product.description}</p>
                     <p className="card-text">Price: GHC {product.price}</p>
                     <button
@@ -62,7 +72,7 @@ const CartPage = () => {
           <div className="text-end">
             <p>Total Price: GHC {calculateTotalPrice()}</p>
             <button className="btn btn-primary ms-2" onClick={handlePurchaseAll}>
-              Purchase All
+              Purchase 
             </button>
           </div>
         </div>

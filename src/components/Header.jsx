@@ -32,12 +32,12 @@ const Header = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={images.jacket}
+            src={images.banner2}
             alt="Third slide"
             
           />
           <Carousel.Caption>
-            <h5 className='willie'>EXPLORE MORE OF OUR PRODUCTS</h5>
+            <h5 className='willie'>FREE DELIVERY</h5>
             <p className='shirts'>
               Your number one best online shopping site
             </p>
