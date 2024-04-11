@@ -22,8 +22,8 @@ export const CartProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    setCart([]); // Clear the cart array
-    setCartCount(0); // Reset the cart count to 0
+    setCart([]); 
+    setCartCount(0); 
   };
 
   return (

@@ -10,7 +10,7 @@ const Paystack = ({ totalAmount, onClose }) => {
 
   const componentProps = {
     email,
-    amount: totalAmount * 100, // Convert to kobo
+    amount: totalAmount * 100, 
     currency: 'GHS',
     metadata: {
       name,

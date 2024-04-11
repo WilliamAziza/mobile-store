@@ -2,13 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { images } from './images';
 import { Card } from 'react-bootstrap';
-import { useCart } from './CartContext'; // Import the useCart hook from your CartContext
+import { useCart } from './CartContext'; 
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const { addToCart } = useCart(); // Use the useCart hook to access addToCart from the context
+  const { addToCart } = useCart(); 
 
-  // Replace this with your product data or fetch it from an API
   const products = {
     'iphone11': {
       name: 'iPhone 11',
@@ -66,7 +65,7 @@ const ProductDetails = () => {
           <Card.Text>Description: {product.description}</Card.Text>
           <button
             className="btn btn-primary"
-            onClick={() => addToCart(product)} // Use addToCart from the context
+            onClick={() => addToCart(product)} 
           >
             Add to Cart
           </button>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from './CartContext';
-import Paystack from './Paystack'; // Import the Paystack component
-import Modal from 'react-bootstrap/Modal'; // Import Bootstrap modal component
+import Paystack from './Paystack'; 
+import Modal from 'react-bootstrap/Modal'; 
 import { images } from './images';
 
 const CartPage = () => {
@@ -17,14 +17,13 @@ const CartPage = () => {
   };
 
   const handlePurchaseAll = () => {
-    // Toggle the display of the payment modal when "Purchase All" button is clicked
+  
     setShowPaymentModal(true);
   };
 
-  // Function to handle clearing the cart
-  const handlePaymentSuccess = () => {
+    const handlePaymentSuccess = () => {
     clearCart();
-    setShowPaymentModal(false); // Close the payment modal
+    setShowPaymentModal(false); 
   };
 
   return (
@@ -78,7 +77,7 @@ const CartPage = () => {
         </div>
       )}
 
-      {/* Payment Modal */}
+      
       <Modal show={showPaymentModal} onHide={() => setShowPaymentModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Payment</Modal.Title>

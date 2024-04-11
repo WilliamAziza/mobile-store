@@ -142,11 +142,10 @@ body {
   margin-bottom: 15px;
 }
 
-/* Style the input fields with border radius */
 .checkout-field input {
   border-radius: 5px;
-  padding: 5px; /* Add some padding for spacing */
-  border: 1px solid #ccc; /* Add a border for clarity */
+  padding: 5px; 
+  border: 1px solid #ccc; 
 }
 
 .paystack-button {
